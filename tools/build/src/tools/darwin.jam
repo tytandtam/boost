@@ -140,7 +140,7 @@ rule init ( version ? : command * : options * : requirement * )
     # - GCC 4.0 and higher in Darwin does not have -fcoalesce-templates.
     if $(real-version) < "4.0.0"
     {
-        flags darwin.compile.c++ OPTIONS $(condition) : -fcoalesce-templates ;
+        #!# flags darwin.compile.c++ OPTIONS $(condition) : -fcoalesce-templates ;
     }
     # - GCC 4.2 and higher in Darwin does not have -Wno-long-double.
     if $(real-version) < "4.2.0"
